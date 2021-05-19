@@ -1,0 +1,103 @@
+.settings {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #898EA3;
+  border-top: 1px solid #CFD4DD;
+  border-bottom: 1px solid #CFD4DD;
+  margin-top: 20px;
+  padding-top: 13px;
+}
+
+.setting-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.setting-container:first-child {
+  color: #20284A;
+}
+.setting-container:first-child p {
+  display: table-cell;
+  height: 40px;
+  line-height: 40px;
+}
+.setting-container:last-child {
+  margin-bottom: 20px;
+}
+.setting-container:last-child input {
+  width: 264px;
+}
+
+.setting-title {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.setting-title .setting-name {
+  width: 110px;
+  text-align: left;
+}
+.setting-title img {
+  margin-right: 20px;
+}
+
+.date-fields {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.field {
+  border: 1px solid #CFD4DD;
+  border-radius: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+}
+.field-small {
+  width: 100px;
+  height: 40px;
+  margin-right: 10px;
+}
+.field-large {
+  width: 264px;
+  height: 90px;
+}
+.field-large::placeholder {
+  transform: translateY(-20px);
+}
+.field:focus {
+  border-color: #2168F5;
+}
+
+.map-column-btn {
+  width: 264px;
+  height: 40px;
+  background: #fff;
+  color: #2168F5;
+  border-radius: 4px;
+  border: 1px #CFD4DD dashed;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: Helvetica Neue, sans-serif;
+}
+.map-column-btn:hover {
+  border-color: #2168F5;
+}
+.map-column-btn img {
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=settings.css.map */

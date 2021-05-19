@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.modal-header {
+  height: 70px;
+  box-shadow: 0 4px 10px 0 #CFD4DD;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 23px 30px;
+}
+.modal-header h1 {
+  font: 24px Poppins, sans-serif;
+  font-weight: 600;
+  color: #20284A;
+  margin: 0;
+}
+.modal-header svg {
+  cursor: pointer;
+}
+.modal-content {
+  padding-left: 148px;
+  padding-top: 60px;
+  color: #20284A;
+}
+.modal-content h2 {
+  font: 18px Poppins, sans-serif;
+  font-weight: 600;
+  color: #20284A;
+  width: fit-content;
+}
+
+.header-selection {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+.header-selection #header-checkbox {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=modal.css.map */

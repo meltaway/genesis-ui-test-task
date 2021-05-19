@@ -1,0 +1,62 @@
+@import "./../variables";
+@import "./../mixins";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.modal {
+  &-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-white;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &-header {
+    height: 70px;
+    box-shadow: 0 4px 10px 0 $color-disabled-grey;
+    @include flex-align-centered;
+    justify-content: space-between;
+    padding: 23px 30px;
+
+    h1 {
+      font: 24px Poppins, sans-serif;
+      font-weight: 600;
+      color: $color-default-text;
+      margin: 0;
+    }
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  &-content {
+    padding: {
+      left: 148px;
+      top: 60px;
+    }
+    color: $color-default-text;
+
+    h2 {
+      font: 18px Poppins, sans-serif;
+      font-weight: 600;
+      color: $color-default-text;
+      width: fit-content;
+    }
+  }
+}
+
+.header-selection {
+  @include flex-align-centered;
+  margin-top: 40px;
+
+  #header-checkbox {
+    margin-right: 10px;
+  }
+}
+
+
+
