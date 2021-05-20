@@ -1,0 +1,21 @@
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid #CFD4DD;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.checkbox:hover {
+  border: 1px solid #044BD9;
+}
+.checkbox:checked {
+  border: 1px solid #2168F5;
+}
+.checkbox:checked:hover {
+  background: #044BD9;
+  fill: #044BD9;
+}
+
+/*# sourceMappingURL=checkbox.css.map */

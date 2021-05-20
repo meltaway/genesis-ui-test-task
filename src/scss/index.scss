@@ -15,31 +15,3 @@ body {
   width: 100%;
   height: 100%;
 }
-
-.checkbox {
-  width: 16px;
-  height: 16px;
-
-  border-radius: 2px;
-  border: 1px solid $color-disabled-grey;
-
-  -moz-appearance:none;
-  -webkit-appearance:none;
-  cursor: pointer;
-
-  &:hover {
-    border: 1px solid $color-hover-blue;
-  }
-
-  &:checked {
-    border: 1px solid $color-primary-blue;
-    background: $color-primary-blue;
-    mask-image: url("./../svg/check.svg");
-    fill: $color-primary-blue;
-
-    &:hover {
-      background: $color-hover-blue;
-      fill: $color-hover-blue;
-    }
-  }
-}

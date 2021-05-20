@@ -1,1 +1,0 @@
-# genesis-ui-test-task

@@ -30,6 +30,9 @@
   padding-left: 148px;
   padding-top: 60px;
   color: #20284A;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .modal-content h2 {
   font: 18px Poppins, sans-serif;
@@ -45,6 +48,35 @@
 }
 .header-selection #header-checkbox {
   margin-right: 10px;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 40px;
+}
+.button-container > * {
+  font-size: 16px;
+  font-family: Helvetica Neue, sans-serif;
+  font-weight: bold;
+  border: none;
+  height: 40px;
+}
+.button-container .back-btn {
+  background: #fff;
+  color: #898EA3;
+  padding: 0 30px 0 0;
+}
+.button-container .next-btn {
+  background: #CFD4DD;
+  border-radius: 4px;
+  color: #fff;
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-container .next-btn svg {
+  margin-left: 8px;
 }
 
 /*# sourceMappingURL=modal.css.map */

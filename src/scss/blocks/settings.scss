@@ -10,6 +10,7 @@
 
   border-top: 1px solid $color-disabled-grey;
   border-bottom: 1px solid $color-disabled-grey;
+  width: 795px;
   margin-top: 20px;
   padding-top: 13px;
 }
@@ -103,7 +104,7 @@
   background: $color-white;
   color: $color-primary-blue;
   border-radius: 4px;
-  border: 1px $color-disabled-grey dashed;
+  border: 2px $color-disabled-grey dashed;
   padding: {
     top: 10px;
     bottom: 10px;
@@ -112,6 +113,7 @@
   @include flex-align-centered;
   justify-content: flex-start;
   font-family: Helvetica Neue, sans-serif;
+  font-weight: 550;
 
   &:hover {
     border-color: $color-primary-blue;
