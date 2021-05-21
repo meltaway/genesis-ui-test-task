@@ -20,14 +20,17 @@
   border-radius: 50%;
 }
 .radio-btn:hover {
+  outline: #2168F5;
   border-color: #2168F5;
 }
 .radio-btn:checked {
   border-color: #2168F5;
+  outline: #2168F5;
   background: #2168F5 url("./../../svg/Dot.svg") no-repeat center center;
 }
 .radio-btn:checked:hover {
   border-color: #044BD9;
+  outline: #044BD9;
   background: #044BD9 url("./../../svg/Dot.svg") no-repeat center center;
 }
 

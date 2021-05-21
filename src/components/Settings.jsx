@@ -75,7 +75,7 @@ const DropdownIndicator = props => {
     );
 };
 
-const Settings = (props) => {
+const Settings = ({onNextActive, onBackActive}) => {
     const [info, setInfo] = useState(true)
     const [selected, setSelected] = useState(null)
     const [filledDates, setFilledDates] = useState(['', '', ''])
@@ -83,9 +83,9 @@ const Settings = (props) => {
     const [amount, setAmount] = useState('')
 
     useEffect(() => {
-        props.onNextActive(!!selected && !!filledDates && !!desc && !!amount)
-        props.onBackActive(!!selected && !!filledDates && !!desc && !!amount)
-    }, [selected, filledDates, desc, amount])
+        onNextActive(!!selected && !!filledDates && !!desc && !!amount)
+        onBackActive(!!selected && !!filledDates && !!desc && !!amount)
+    }, [selected, filledDates, desc, amount, onNextActive, onBackActive])
 
     const onSelectionChange = (selectedOption) => {
         setSelected(selectedOption)

@@ -76,7 +76,7 @@
   @include flex-align-centered;
   justify-content: flex-start;
 
-  .select {
+  .date-field:nth-child(2) {
     margin-left: 20px;
   }
 
@@ -103,6 +103,8 @@
 }
 
 .field {
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 14px;
   border: 1px solid $color-disabled-grey;
   border-radius: 4px;
   padding: {
@@ -132,6 +134,7 @@
   }
 
   &:focus {
+    outline: $color-primary-blue;
     border-color: $color-primary-blue;
   }
 
@@ -181,6 +184,7 @@
   font-weight: 550;
 
   &:hover {
+    outline: $color-primary-blue;
     border-color: $color-primary-blue;
   }
 

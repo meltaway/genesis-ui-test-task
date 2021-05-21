@@ -9,13 +9,16 @@
 }
 .checkbox:hover {
   border: 1px solid #044BD9;
+  outline: #044BD9;
 }
 .checkbox:checked {
   border-color: #2168F5;
+  outline: #2168F5;
   background: #2168F5 url("./../../svg/Check.svg") no-repeat center center;
 }
 .checkbox:checked:hover {
   border-color: #044BD9;
+  outline: #044BD9;
   background: #044BD9 url("./../../svg/Check.svg") no-repeat center center;
 }
 

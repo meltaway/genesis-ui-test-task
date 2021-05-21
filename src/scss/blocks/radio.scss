@@ -23,15 +23,18 @@
   border-radius: 50%;
 
   &:hover {
+    outline: $color-primary-blue;
     border-color: $color-primary-blue;
   }
 
   &:checked {
     border-color: $color-primary-blue;
+    outline: $color-primary-blue;
     background: $color-primary-blue url("./../../svg/Dot.svg") no-repeat center center;
 
     &:hover {
       border-color: $color-hover-blue;
+      outline: $color-hover-blue;
       background: $color-hover-blue url("./../../svg/Dot.svg") no-repeat center center;
     }
   }

@@ -117,17 +117,21 @@
 
 .back-btn {
   color: $color-disabled-text;
+  cursor: default;
 
   &-active {
     color: $color-default-text;
+    cursor: pointer;
   }
 }
 
 .next-btn {
   background: $color-disabled-grey;
+  cursor: default;
 
   &-active {
     background: $color-primary-blue;
+    cursor: pointer;
 
     &:hover {
       background: $color-hover-blue;

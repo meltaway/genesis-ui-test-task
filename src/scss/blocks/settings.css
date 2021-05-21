@@ -72,7 +72,7 @@
   align-items: center;
   justify-content: flex-start;
 }
-.date-fields .select {
+.date-fields .date-field:nth-child(2) {
   margin-left: 20px;
 }
 @media only screen and (max-width: 768px) {
@@ -96,6 +96,8 @@
 }
 
 .field {
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 14px;
   border: 1px solid #CFD4DD;
   border-radius: 4px;
   padding-top: 8px;
@@ -121,6 +123,7 @@
   height: 90px;
 }
 .field:focus {
+  outline: #2168F5;
   border-color: #2168F5;
 }
 .field:active::placeholder {
@@ -163,6 +166,7 @@
   font-weight: 550;
 }
 .map-column-btn:hover {
+  outline: #2168F5;
   border-color: #2168F5;
 }
 .map-column-btn img {

@@ -105,16 +105,20 @@
 
 .back-btn {
   color: #898EA3;
+  cursor: default;
 }
 .back-btn-active {
   color: #20284A;
+  cursor: pointer;
 }
 
 .next-btn {
   background: #CFD4DD;
+  cursor: default;
 }
 .next-btn-active {
   background: #2168F5;
+  cursor: pointer;
 }
 .next-btn-active:hover {
   background: #044BD9;
