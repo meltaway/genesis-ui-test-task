@@ -10,6 +10,10 @@ body {
   font-size: 14px;
   font-family: Helvetica Neue, sans-serif;
 
+  @include for-small-screens {
+    font-size: 12px;
+  }
+
   @include flex-align-centered;
   justify-content: center;
   width: 100%;

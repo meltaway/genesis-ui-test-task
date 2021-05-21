@@ -2,7 +2,17 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax($col-width, 1fr));
 }
+
 @mixin flex-align-centered {
   display: flex;
   align-items: center;
+}
+
+@mixin default-icon-size {
+  width: 16px;
+  height: 16px;
+}
+
+@mixin for-small-screens {
+  @media only screen and (max-width: 768px) { @content; }
 }

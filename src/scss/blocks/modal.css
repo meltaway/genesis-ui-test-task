@@ -34,17 +34,34 @@
   flex-direction: column;
   align-items: flex-start;
 }
+@media only screen and (max-width: 768px) {
+  .modal-content {
+    padding-left: 40px;
+    padding-top: 40px;
+  }
+}
 .modal-content h2 {
   font: 18px Poppins, sans-serif;
   font-weight: 600;
   color: #20284A;
   width: fit-content;
 }
+@media only screen and (max-width: 768px) {
+  .modal-content h2 {
+    text-align: left;
+    width: 50vw;
+  }
+}
 
 .header-selection {
   display: flex;
   align-items: center;
   margin-top: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .header-selection {
+    margin-top: 20px;
+  }
 }
 .header-selection #header-checkbox {
   margin-right: 10px;
@@ -54,6 +71,12 @@
   display: flex;
   margin-top: 40px;
 }
+@media only screen and (max-width: 768px) {
+  .button-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
 .button-container > * {
   font-size: 16px;
   font-family: Helvetica Neue, sans-serif;
@@ -61,13 +84,14 @@
   border: none;
   height: 40px;
 }
-.button-container .back-btn {
+
+.back-btn, .back-btn-active {
   background: #fff;
   color: #898EA3;
   padding: 0 30px 0 0;
 }
-.button-container .next-btn {
-  background: #CFD4DD;
+
+.next-btn, .next-btn-active {
   border-radius: 4px;
   color: #fff;
   width: 170px;
@@ -75,8 +99,25 @@
   align-items: center;
   justify-content: center;
 }
-.button-container .next-btn svg {
+.next-btn svg, .next-btn-active svg {
   margin-left: 8px;
+}
+
+.back-btn {
+  color: #898EA3;
+}
+.back-btn-active {
+  color: #20284A;
+}
+
+.next-btn {
+  background: #CFD4DD;
+}
+.next-btn-active {
+  background: #2168F5;
+}
+.next-btn-active:hover {
+  background: #044BD9;
 }
 
 /*# sourceMappingURL=modal.css.map */

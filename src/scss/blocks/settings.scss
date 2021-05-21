@@ -12,7 +12,10 @@
   border-bottom: 1px solid $color-disabled-grey;
   width: 795px;
   margin-top: 20px;
-  padding-top: 13px;
+
+  @include for-small-screens {
+    width: 80vw;
+  }
 }
 
 .setting-container {
@@ -38,6 +41,9 @@
     margin-bottom: 20px;
     input {
       width: 264px;
+      @include for-small-screens {
+        width: 200px;
+      }
     }
   }
 }
@@ -54,11 +60,46 @@
   img {
     margin-right: 20px;
   }
+
+  @include for-small-screens {
+    margin-right: 10px;
+    .setting-name {
+      width: 75px;
+    }
+    img {
+      display: none;
+    }
+  }
 }
 
 .date-fields {
   @include flex-align-centered;
   justify-content: flex-start;
+
+  .select {
+    margin-left: 20px;
+  }
+
+  @include for-small-screens {
+    flex-direction: column;
+    align-items: flex-start;
+    & > input {
+      margin: 5px 0;
+
+      &:nth-child(2) {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+
+    .select {
+      margin-left: 0;
+    }
+
+    .select__control {
+      width: 200px;
+    }
+  }
 }
 
 .field {
@@ -70,6 +111,15 @@
     left: 16px;
   }
 
+  &::placeholder {
+    font-family: Helvetica Neue, sans-serif;
+    font-size: 14px;
+
+    @include for-small-screens {
+      font-size: 12px;
+    }
+  }
+
   &-small {
     width: 100px;
     height: 40px;
@@ -77,10 +127,6 @@
   }
 
   &-large {
-    &::placeholder {
-      transform: translateY(-20px);
-    }
-
     width: 264px;
     height: 90px;
   }
@@ -89,13 +135,32 @@
     border-color: $color-primary-blue;
   }
 
-  //&:active {
-  //  border-color: $color-primary-blue;
-  //}
+  &:active::placeholder {
+    color: $color-disabled-text;
+  }
+}
+
+@include for-small-screens {
+  .field {
+    &-small {
+      width: 80px;
+      margin-right: 10px;
+    }
+
+    &-large {
+      width: 200px;
+    }
+  }
 }
 
 .descriptions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
+.description-field {
+  resize: none;
 }
 
 .map-column-btn {
@@ -127,4 +192,38 @@
       right: 10px;
     }
   }
+
+  @include for-small-screens {
+    width: 200px;
+    height: 50px;
+  }
 }
+
+.amounts-header {
+  @include flex-align-centered;
+  height: 34px;
+  margin-top: 10px;
+
+  p:first-child {
+    font-weight: bold;
+    color: $color-default-text;
+    margin-right: 10px;
+    line-height: 34px;
+  }
+
+  img:hover {
+    cursor: pointer;
+  }
+
+  .tooltip {
+    width: 68px;
+    height: 100%;
+    border-radius: 4px;
+    background: $color-info;
+    color: $color-white;
+    text-align: center;
+    line-height: 34px;
+    margin-left: 6px;
+  }
+}
+

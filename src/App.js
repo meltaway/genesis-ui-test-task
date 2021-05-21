@@ -7,19 +7,22 @@ import Settings from "./components/Settings";
 import ReactModal from "react-modal";
 
 import './scss/blocks/modal.scss'
-import infoGrey from './svg/Info grey.svg'
-import infoDark from './svg/Info dark.svg'
 
 const App = () => {
   const [open, openModal] = useState(false);
-  const [shown, showInfo] = useState(true);
+  const [nextActive, setNextActive] = useState(false)
+    const [backActive, setBackActive] = useState(false)
 
   const toggleModal = () => {
       openModal(!open)
   }
 
-  const toggleInfo = () => {
-      showInfo(!shown)
+  const toggleNextActive = (active) => {
+      setNextActive(active)
+  }
+
+  const toggleBackActive = (active) => {
+      setBackActive(active)
   }
 
   return (
@@ -43,30 +46,15 @@ const App = () => {
                 <div className={"modal-content"}>
                     <h2>Map columns. For each field, select bank account fields</h2>
                     <div className={"header-selection"}>
-                        <Checkbox classname={"checkbox"} id={"header-checkbox"}/>
-                        <label htmlFor={"header-checkbox"}>First row in file is a header row</label>
+                        <Checkbox className={"checkbox"}
+                                  id={"header-checkbox"}
+                                  label={"First row in file is a header row"}
+                        />
                     </div>
-                    <Settings/>
-                    <div className={"amounts"}>
-                        <div className={"amounts-header"}>
-                            <p>File has amounts in:</p>
-                            <img src={shown ? infoGrey : infoDark}
-                                 alt={"info"}
-                                 onMouseEnter={toggleInfo}
-                                 onMouseLeave={toggleInfo}
-                            />
-                            <p style={shown ? {display: "none"} : {display: "block"}} className={"tooltip"}>Info text</p>
-                        </div>
-                        <div className={"file-radios"}>
-                            <input type={"radio"} id={"1column"} name={"file-radio"} value={"1column"}/>
-                            <label htmlFor={"1column"}>1 column: both positive and negative numbers</label>
-                            <input type={"radio"} id={"2column"} name={"file-radio"} value={"2column"}/>
-                            <label htmlFor={"2column"}>2 columns: separate positive and negative numbers</label>
-                        </div>
-                    </div>
+                    <Settings onNextActive={toggleNextActive} onBackActive={toggleBackActive}/>
                     <div className={"button-container"}>
-                        <button className={"back-btn"}>Back</button>
-                        <button className={"next-btn"}>
+                        <button className={nextActive ? "back-btn-active" : "back-btn"}>Back</button>
+                        <button className={nextActive ? "next-btn-active" : "next-btn"}>
                             Next
                             <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fillRule="evenodd" clipRule="evenodd" d="M9.7097 4.3871L9.79289 4.29289C10.1534 3.93241 10.7206 3.90468 11.1129 4.2097L11.2071 4.29289L14.2071 7.29289L14.2485 7.33685V7.33685L14.3037 7.40469V7.40469L14.3753 7.51594V7.51594L14.4288 7.62866V7.62866L14.4642 7.73401V7.73401L14.4931 7.8819V7.8819L14.5 8V8L14.4972 8.07524V8.07524L14.4798 8.20073V8.20073L14.4503 8.31214V8.31214L14.4063 8.42322V8.42322L14.354 8.52071V8.52071L14.2803 8.62545V8.62545L14.2071 8.70711L11.2071 11.7071C10.8166 12.0976 10.1834 12.0976 9.79289 11.7071C9.43241 11.3466 9.40468 10.7794 9.7097 10.3871L9.79289 10.2929L11.085 9H3.5C2.94772 9 2.5 8.55228 2.5 8C2.5 7.44772 2.94772 7 3.5 7H11.085L9.79289 5.70711C9.43241 5.34662 9.40468 4.77939 9.7097 4.3871L9.79289 4.29289L9.7097 4.3871Z" fill="white"/>

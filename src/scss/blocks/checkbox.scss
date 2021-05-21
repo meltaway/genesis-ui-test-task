@@ -2,14 +2,13 @@
 @import "./../mixins";
 
 .checkbox {
-  width: 16px;
-  height: 16px;
+  @include default-icon-size;
 
   border-radius: 2px;
   border: 1px solid $color-disabled-grey;
 
-  -moz-appearance:none;
-  -webkit-appearance:none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
   cursor: pointer;
 
   &:hover {
@@ -17,11 +16,12 @@
   }
 
   &:checked {
-    border: 1px solid $color-primary-blue;
+    border-color: $color-primary-blue;
+    background: $color-primary-blue url("./../../svg/Check.svg") no-repeat center center;
 
     &:hover {
-      background: $color-hover-blue;
-      fill: $color-hover-blue;
+      border-color: $color-hover-blue;
+      background: $color-hover-blue url("./../../svg/Check.svg") no-repeat center center;
     }
   }
 }

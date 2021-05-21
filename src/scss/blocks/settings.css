@@ -8,7 +8,11 @@
   border-bottom: 1px solid #CFD4DD;
   width: 795px;
   margin-top: 20px;
-  padding-top: 13px;
+}
+@media only screen and (max-width: 768px) {
+  .settings {
+    width: 80vw;
+  }
 }
 
 .setting-container {
@@ -33,6 +37,11 @@
 .setting-container:last-child input {
   width: 264px;
 }
+@media only screen and (max-width: 768px) {
+  .setting-container:last-child input {
+    width: 200px;
+  }
+}
 
 .setting-title {
   height: 40px;
@@ -46,11 +55,44 @@
 .setting-title img {
   margin-right: 20px;
 }
+@media only screen and (max-width: 768px) {
+  .setting-title {
+    margin-right: 10px;
+  }
+  .setting-title .setting-name {
+    width: 75px;
+  }
+  .setting-title img {
+    display: none;
+  }
+}
 
 .date-fields {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+.date-fields .select {
+  margin-left: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .date-fields {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .date-fields > input {
+    margin: 5px 0;
+  }
+  .date-fields > input:nth-child(2) {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .date-fields .select {
+    margin-left: 0;
+  }
+  .date-fields .select__control {
+    width: 200px;
+  }
 }
 
 .field {
@@ -59,6 +101,15 @@
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 16px;
+}
+.field::placeholder {
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 14px;
+}
+@media only screen and (max-width: 768px) {
+  .field::placeholder {
+    font-size: 12px;
+  }
 }
 .field-small {
   width: 100px;
@@ -69,11 +120,30 @@
   width: 264px;
   height: 90px;
 }
-.field-large::placeholder {
-  transform: translateY(-20px);
-}
 .field:focus {
   border-color: #2168F5;
+}
+.field:active::placeholder {
+  color: #898EA3;
+}
+
+@media only screen and (max-width: 768px) {
+  .field-small {
+    width: 80px;
+    margin-right: 10px;
+  }
+  .field-large {
+    width: 200px;
+  }
+}
+.descriptions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.description-field {
+  resize: none;
 }
 
 .map-column-btn {
@@ -100,6 +170,38 @@
   height: 12px;
   margin-left: 8px;
   margin-right: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .map-column-btn {
+    width: 200px;
+    height: 50px;
+  }
+}
+
+.amounts-header {
+  display: flex;
+  align-items: center;
+  height: 34px;
+  margin-top: 10px;
+}
+.amounts-header p:first-child {
+  font-weight: bold;
+  color: #20284A;
+  margin-right: 10px;
+  line-height: 34px;
+}
+.amounts-header img:hover {
+  cursor: pointer;
+}
+.amounts-header .tooltip {
+  width: 68px;
+  height: 100%;
+  border-radius: 4px;
+  background: #141419;
+  color: #fff;
+  text-align: center;
+  line-height: 34px;
+  margin-left: 6px;
 }
 
 /*# sourceMappingURL=settings.css.map */

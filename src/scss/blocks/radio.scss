@@ -1,0 +1,40 @@
+@import "./../variables";
+@import "./../mixins";
+
+.radio-container {
+  display: flex;
+  margin: 10px 0 10px 0;
+
+  @include for-small-screens {
+    label {
+      width: 70vw;
+      text-align: left;
+    }
+  }
+}
+
+.radio-btn {
+  margin: 0 10px 0 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  @include default-icon-size;
+  border: 1px solid $color-disabled-grey;
+  border-radius: 50%;
+
+  &:hover {
+    border-color: $color-primary-blue;
+  }
+
+  &:checked {
+    border-color: $color-primary-blue;
+    background: $color-primary-blue url("./../../svg/Dot.svg") no-repeat center center;
+
+    &:hover {
+      border-color: $color-hover-blue;
+      background: $color-hover-blue url("./../../svg/Dot.svg") no-repeat center center;
+    }
+  }
+
+
+}
